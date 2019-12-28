@@ -1,8 +1,13 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     protected static int i=0;
+    private static Scanner input;
+    private static String name;
+    private static String switchvalue;
 
     public static void main(String[] args) {
 	// write your code here
@@ -27,8 +32,10 @@ public class Main {
             System.out.println("False");
         }
 //Getting Name through Getter Setter
+        //ctrl+p Short key
         UserModel userModelAllData = new UserModel(0001,"Kashan","ZafarAlam",24,"Male",424015259);
         UserModel userModelCompsalry = new UserModel("Tariq","Abdul Bari",424015266);
+
         System.out.println("User Code is : "+userModelAllData.getCode());
         System.out.println("User Name is : "+userModelAllData.getName());
         System.out.println("User Father Name is : "+userModelAllData.getFname());
@@ -39,6 +46,25 @@ public class Main {
         System.out.println("User Name is : "+userModelCompsalry.getName());
         System.out.println("User Father Name is : "+userModelCompsalry.getFname());
         System.out.println("User CNIC NO is : "+userModelCompsalry.getCnic());
+        input = new Scanner(System.in);
+        name = input.nextLine();
+        userModelAllData.setName(name);
+        System.out.println(name);
+        //Switch Statment
+        switchvalue = input.nextLine();
+        switch (switchvalue){
+            case "Kashan" :
+                System.out.println("Kashan Work");
+                break;
+            case "Tariq" :
+                System.out.println("Tariq Work");
+                break;
+            default:
+                System.out.println("Nothing");
+        }
+
+
+
 
     }
 }

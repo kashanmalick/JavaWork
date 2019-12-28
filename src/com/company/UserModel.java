@@ -11,6 +11,7 @@ public class UserModel {
 
 
     // constructor ALways Same As CLass Name
+    //alt + insert Short key
     public UserModel(int code, String name, String fname, int age, String gender, long cnic) {
         this.code = code;
         this.name = name;
